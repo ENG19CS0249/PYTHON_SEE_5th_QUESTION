@@ -123,7 +123,15 @@ if __name__ == '__main__':
     print(dup)
 
 
-5a)
+5a)if k in data1:
+            v1 = data1[k]
+        if v1 != v2:
+            dupKeys[k] = [v1, v2]
+            del data1[k]
+        else:
+            data1[k] = v2
+    return dupKeys
+    
    4
    1 2
    2 2
@@ -135,7 +143,35 @@ if __name__ == '__main__':
 
 
 
-   5 c)
+ 5b)
+  
+    def uniqueUpdate(data1, data2):
+    # Initially empty dictionary
+    dupKeys = {}
+
+    # Examine every (k, v2) pair in data2
+    for [k, v2] in data2:
+        # Check if there is a key-value
+        # pair with key = k in data1
+        if k in data1:
+            v1 = data1[k]
+            # (k, v1) in dict1
+            # Check if v1 != v2
+            if v1 != v2:
+                # Add (k, [v1, v2])
+                # to dictionary                
+                dupKeys[k] = [v1, v2]
+                # Remove (k, v1) from data1
+                del data1[k]
+        else:
+            # Add (k, v2) to data1
+            data1[k] = v2
+    # After processing all (k, v2) in
+    # data2, return the dictionary
+    return dupKeys
+    
+      
+ 5c)
    Test case 1:
    4
    1 2
@@ -156,13 +192,5 @@ if __name__ == '__main__':
    3 3
    4 9
    
-   5b)
-   if k in data1:
-       v1=data1[k]
-       if v1!=v2:
-           deepkeys[k]=[v1,v2]
-           del data1[k]
-          
-   else:
-        data1[k]=v2
+  
       
