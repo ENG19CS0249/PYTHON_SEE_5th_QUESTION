@@ -121,3 +121,48 @@ if __name__ == '__main__':
     print(data1)
     print(data2)
     print(dup)
+
+
+5a)
+   4
+   1 2
+   2 2
+   3 2
+   4 9
+   2
+   3 3
+   4 9
+
+
+
+   5 c)
+   Test case 1:
+   4
+   1 2
+   2 2
+   3 2
+   4 4
+   2
+   3 3
+   4 4  
+
+   Test case 2:
+   4
+   1 2
+   2 2
+   3 2
+   4 4
+   2
+   3 3
+   4 9
+   
+   5b)
+   if k in data1:
+       v1=data1[k]
+       if v1!=v2:
+           deepkeys[k]=[v1,v2]
+           del data1[k]
+          
+   else:
+        data1[k]=v2
+      
